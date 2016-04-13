@@ -13,10 +13,12 @@ type baseDice interface {
 type DiceType uint8
 
 const (
-	TYPE_POLL DiceType = iota
+	TYPE_INCREMENT DiceType = iota
 	TYPE_RANDOM
 	TYPE_MIXED
 )
+
+const TYPE_POLL = TYPE_INCREMENT
 
 type DiceInt struct {
 	baseDice
