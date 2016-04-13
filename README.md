@@ -4,9 +4,7 @@
 
 * Base and Simple dice for Golang
 * Support return int
-* Increment, Random adn Mixed modes
-
-# Getting Started
+* Increment, Random and Mixed mode
 
 ## Installation
 
@@ -17,7 +15,7 @@ go get -u github.com/WindomZ/go-dice
 ## TODO
 
 * Usage and more demos
-* More practical functions
+* More useful functions
 * More Test and Benchmark
 
 ## LICENSE
