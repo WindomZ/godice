@@ -1,6 +1,22 @@
 # go-dice
 
-Base and Simple dice for Golang
+## Overview
+
+* Base and Simple dice for Golang
+
+# Getting Started
+
+## Installation
+
+```
+go get -u github.com/WindomZ/go-dice
+```
+
+## TODO
+
+* Usage and more demos
+* More practical functions
+* More Test and Benchmark
 
 ## LICENSE
 
