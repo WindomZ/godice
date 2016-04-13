@@ -3,6 +3,8 @@
 ## Overview
 
 * Base and Simple dice for Golang
+* Support return int
+* Increment, Random adn Mixed modes
 
 # Getting Started
 
