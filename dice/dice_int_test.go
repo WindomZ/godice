@@ -6,11 +6,17 @@ import (
 )
 
 func TestNewDiceInt(t *testing.T) {
-	assert.NotEmpty(t, NewDiceInt(1, TYPE_RANDOM))
+	d := NewDiceInt(-1, TYPE_RANDOM)
+	assert.NotEmpty(t, d)
+	assert.Equal(t, d.Roll(), d)
+	assert.Equal(t, d.Roll().Dice(), int64(0))
 }
 
 func TestNewDiceInt64(t *testing.T) {
-	assert.NotEmpty(t, NewDiceInt64(1, TYPE_MIXED))
+	d := NewDiceInt64(0, TYPE_MIXED)
+	assert.NotEmpty(t, d)
+	assert.Equal(t, d.Roll(), d)
+	assert.Equal(t, d.Roll().Dice(), int64(0))
 }
 
 func TestDiceInt_Roll(t *testing.T) {
