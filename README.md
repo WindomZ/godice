@@ -1,7 +1,7 @@
-# go-dice
-[![Build Status](https://travis-ci.org/WindomZ/go-dice.svg?branch=master)](https://travis-ci.org/WindomZ/go-dice)
+# godice
+[![Build Status](https://travis-ci.org/WindomZ/godice.svg?branch=master)](https://travis-ci.org/WindomZ/godice)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Coverage Status](https://coveralls.io/repos/github/WindomZ/go-dice/badge.svg?branch=dev)](https://coveralls.io/github/WindomZ/go-dice?branch=dev)
+[![Coverage Status](https://coveralls.io/repos/github/WindomZ/godice/badge.svg?branch=dev)](https://coveralls.io/github/WindomZ/godice?branch=dev)
 
 Simple API such as roll the dice for Golang.
 
@@ -10,7 +10,7 @@ Simple API such as roll the dice for Golang.
 
 ## Features
 
-### [dice](https://github.com/WindomZ/go-dice/tree/master/dice)
+### [dice](https://github.com/WindomZ/godice/tree/master/dice)
 
 - [x] Such as roll the dice, get the *mode* result of the integer
 - [x] Support `Increment`, `Random` and `Mixed` modes
@@ -25,9 +25,9 @@ Simple API such as roll the dice for Golang.
 ## Installation
 
 ```
-go get -u github.com/WindomZ/go-dice...
+go get -u github.com/WindomZ/godice...
 ```
 
 ## License
 
-The [MIT License](https://github.com/WindomZ/go-dice/blob/master/LICENSE)
+The [MIT License](https://github.com/WindomZ/godice/blob/master/LICENSE)
