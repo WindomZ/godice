@@ -1,4 +1,10 @@
 # go-dice
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+Simple API such as roll the dice for Golang.
+
+![v0.1.0](https://img.shields.io/badge/version-v0.1.0-yellow.svg)
+![status](https://img.shields.io/badge/status-beta-yellow.svg)
 
 ## Overview
 
@@ -9,7 +15,7 @@
 ## Installation
 
 ```
-go get -u github.com/WindomZ/go-dice
+go get -u github.com/WindomZ/go-dice...
 ```
 
 ## TODO
@@ -18,6 +24,6 @@ go get -u github.com/WindomZ/go-dice
 * More useful functions
 * More Test and Benchmark
 
-## LICENSE
+## License
 
-MIT(http://opensource.org/licenses/mit-license.php)
+The [MIT License](https://github.com/WindomZ/go-dice/blob/master/LICENSE)
