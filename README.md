@@ -1,6 +1,7 @@
 # go-dice
 [![Build Status](https://travis-ci.org/WindomZ/go-dice.svg?branch=master)](https://travis-ci.org/WindomZ/go-dice)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Coverage Status](https://coveralls.io/repos/github/WindomZ/go-dice/badge.svg?branch=dev)](https://coveralls.io/github/WindomZ/go-dice?branch=dev)
 
 Simple API such as roll the dice for Golang.
 
