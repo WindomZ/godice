@@ -1,10 +1,13 @@
 package dice
 
-import "testing"
+import (
+	"github.com/WindomZ/testify/assert"
+	"testing"
+)
 
-func TestDiceIntThrow(t *testing.T) {
-	d := NewDiceInt(50, TYPE_INCREMENT)
-	for i := 0; i < 100; i++ {
-		t.Log(d.TV())
-	}
+func TestNewDice(t *testing.T) {
+	d := NewDice(5, TYPE_DEFAULT)
+	assert.Equal(t, d.Roll(), d)
+	assert.Equal(t, d.Roll().Dice(), int64(2))
+	assert.Equal(t, d.Roll().Dice(), int64(4))
 }
