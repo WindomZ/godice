@@ -5,7 +5,7 @@
 
 Simple API such as roll the dice for Golang.
 
-![v0.3.0](https://img.shields.io/badge/version-v0.3.0-yellow.svg)
+![v0.4.0](https://img.shields.io/badge/version-v0.4.0-yellow.svg)
 ![status](https://img.shields.io/badge/status-beta-yellow.svg)
 
 ## Features
@@ -19,7 +19,7 @@ Simple API such as roll the dice for Golang.
 ### [roll]()
 
 - [x] Such as a lucky drawer, get the *random* result
-- [ ] Support `Random` and `Balanced` mode
+- [x] Support `Random` and `Balanced` mode
 - [x] Support return string
 - [ ] Support return int, int8, int16, int32 and int64
 - [ ] Support return float32 and float64
