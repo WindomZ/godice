@@ -31,16 +31,17 @@ func Test_Roll_Weight(t *testing.T) {
 
 func Test_Roll_Roll(t *testing.T) {
 	roll := NewRoll()
-	assert.NotEmpty(t, roll.AddRoll("a", 1).AddRoll("bb", 2).AddRoll("ccc", 3))
+	assert.NotEmpty(t,
+		roll.AddRoll(int8(1), 1).AddRoll(int16(2), 2).AddRoll(int32(3), 3).AddRoll(int64(4), 4))
+	assert.NotEmpty(t,
+		roll.AddRoll("a", 1).AddRoll("bb", 2).AddRoll("ccc", 3))
 
 	check := make(map[interface{}]bool)
 	for i := 0; i < 1000; i++ {
 		inst := roll.Roll()
-		if b, ok := check[inst]; ok && b {
-			check[inst] = false
+		if _, ok := check[inst]; !ok {
+			check[inst] = true
 		}
 	}
-	for _, b := range check {
-		assert.False(t, b)
-	}
+	assert.Equal(t, roll.Size(), len(check))
 }

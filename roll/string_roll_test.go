@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestStringRoll(t *testing.T) {
+func Test_Roll_StringRoll(t *testing.T) {
 	roll := NewStringRoll()
 
 	assert.NotEmpty(t,
