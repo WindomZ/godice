@@ -13,6 +13,7 @@ func init() {
 
 type Roll interface {
 	AddRoll(inst interface{}, weight int) Roll
+	Size() int
 	Weight(inst interface{}) int
 	Roll() interface{}
 }
@@ -21,17 +22,24 @@ func NewRoll() Roll {
 	return newRoll()
 }
 
+func NewBalancedRoll() Roll {
+	return &_RollBalanced{
+		_Roll:    *newRoll(),
+		balanced: make(map[interface{}]int64),
+	}
+}
+
 type _Roll struct {
-	mutex   *sync.RWMutex
 	mapping map[interface{}]int64
 	weights int64
+	mutex   *sync.RWMutex
 }
 
 func newRoll() *_Roll {
 	return &_Roll{
-		mutex:   &sync.RWMutex{},
 		mapping: make(map[interface{}]int64),
 		weights: 0,
+		mutex:   &sync.RWMutex{},
 	}
 }
 
@@ -50,9 +58,13 @@ func (r *_Roll) AddRoll(inst interface{}, weight int) Roll {
 	return r
 }
 
+func (r _Roll) Size() int {
+	return len(r.mapping)
+}
+
 func (r _Roll) Weight(inst interface{}) int {
-	if w, ok := r.mapping[inst]; ok {
-		return int(w)
+	if weight, ok := r.mapping[inst]; ok {
+		return int(weight)
 	}
 	return 0
 }
@@ -61,9 +73,9 @@ func (r _Roll) Roll() interface{} {
 	r.mutex.RLock()
 	defer r.mutex.RUnlock()
 	index := rand.Int63n(r.weights)
-	for v, w := range r.mapping {
-		if index -= w; index <= 0 {
-			return v
+	for inst, weight := range r.mapping {
+		if index -= weight; index <= 0 {
+			return inst
 		}
 	}
 	return nil
