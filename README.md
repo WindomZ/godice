@@ -16,7 +16,7 @@ Simple API such as roll the dice for Golang.
 - [x] Support `Increment`, `Random` and `Mixed` modes
 - [x] Support return int, int8, int16, int32 and int64
   
-### [roll]()
+### [roll](https://github.com/WindomZ/godice/tree/master/roll)
 
 - [x] Such as a lucky drawer, get the *random* result
 - [x] Support `Random` and `Balanced` mode
