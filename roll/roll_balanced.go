@@ -20,12 +20,14 @@ func (r *_RollBalanced) Roll() interface{} {
 			r.weights += weight
 		}
 	}
-	index := rand.Int63n(r.weights)
-	for inst, weight := range r.balanced {
-		if index -= weight; index <= 0 {
-			delete(r.balanced, inst)
-			r.weights -= weight
-			return inst
+	if r.weights > 0 {
+		index := rand.Int63n(r.weights)
+		for inst, weight := range r.balanced {
+			if index -= weight; index <= 0 {
+				delete(r.balanced, inst)
+				r.weights -= weight
+				return inst
+			}
 		}
 	}
 	return nil

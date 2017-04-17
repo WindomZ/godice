@@ -72,10 +72,12 @@ func (r _Roll) Weight(inst interface{}) int {
 func (r _Roll) Roll() interface{} {
 	r.mutex.RLock()
 	defer r.mutex.RUnlock()
-	index := rand.Int63n(r.weights)
-	for inst, weight := range r.mapping {
-		if index -= weight; index <= 0 {
-			return inst
+	if r.weights > 0 {
+		index := rand.Int63n(r.weights)
+		for inst, weight := range r.mapping {
+			if index -= weight; index <= 0 {
+				return inst
+			}
 		}
 	}
 	return nil
