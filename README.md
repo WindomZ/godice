@@ -5,7 +5,7 @@
 
 Simple API such as roll the dice for Golang.
 
-![v0.4.0](https://img.shields.io/badge/version-v0.4.0-yellow.svg)
+![v0.4.1](https://img.shields.io/badge/version-v0.4.1-yellow.svg)
 ![status](https://img.shields.io/badge/status-beta-yellow.svg)
 
 ## Features
